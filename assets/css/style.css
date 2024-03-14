@@ -4,11 +4,14 @@
   color: #334022;
   font-family: "Libre Baskerville", serif;
   font-size: 14px;
-  box-sizing: content-box; }
+  box-sizing: border-box; }
 
 body {
-  background-color: #334022; }
+  background-color: #334022;
+  display: flex;
+  justify-content: center; }
   body .wrapper {
+    max-width: 720px;
     margin: 15px;
     background-color: #FDE8D6;
     border-radius: 20px; }
@@ -46,22 +49,27 @@ main .title {
 .step {
   margin: 36px 5vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center; }
-  .step .left .name h3 {
-    font-size: 24px;
-    font-weight: 700; }
+  .step .left {
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 30vw;
+    margin-right: 20px;
+    padding-right: 10px; }
+    .step .left .name h3 {
+      font-size: 24px; }
   .step .right {
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     gap: 20px; }
     .step .right .sub {
       display: flex;
       justify-content: flex-start;
-      align-items: center;
-      width: 62.5vw; }
+      align-items: center; }
       .step .right .sub img {
         display: block; }
       .step .right .sub div {
@@ -69,8 +77,44 @@ main .title {
       .step .right .sub span {
         font-weight: 700;
         text-transform: uppercase; }
+  .step .union::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 80px;
+    top: calc( 50% - 40px );
+    left: -12.5px;
+    border-top: 1px solid #334022;
+    border-left: 1px solid #334022;
+    border-bottom: 1px solid #334022; }
 
 .icon {
   width: 50px; }
+
+.rest {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .rest .center {
+    position: relative;
+    width: 34vw;
+    padding: 15px;
+    border-radius: 20px;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: #334022;
+    text-align: center; }
+    .rest .center span {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 16px;
+      text-align: center; }
+  .rest .dashes {
+    display: block;
+    width: calc( 33vw - 15px );
+    height: 2px;
+    border-top: 2px dashed #334022; }
 
 /*# sourceMappingURL=style.css.map */
