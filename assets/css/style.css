@@ -3,7 +3,8 @@
   padding: 0;
   color: #334022;
   font-family: "Libre Baskerville", serif;
-  font-size: 16px; }
+  font-size: 14px;
+  box-sizing: content-box; }
 
 body {
   background-color: #334022; }
@@ -43,8 +44,33 @@ main .title {
     margin-top: 10px; }
 
 .step {
-  margin: 36px 10vw;
+  margin: 36px 5vw;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
+  .step .left .name h3 {
+    font-size: 24px;
+    font-weight: 700; }
+  .step .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px; }
+    .step .right .sub {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 62.5vw; }
+      .step .right .sub img {
+        display: block; }
+      .step .right .sub div {
+        margin-left: 15px; }
+      .step .right .sub span {
+        font-weight: 700;
+        text-transform: uppercase; }
+
+.icon {
+  width: 50px; }
 
 /*# sourceMappingURL=style.css.map */

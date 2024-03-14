@@ -7,7 +7,8 @@ $letra: "Libre Baskerville", serif
 	padding: 0
 	color: $olive
 	font-family: $letra
-	font-size: 16px
+	font-size: 14px
+	box-sizing: content-box
 
 body
 	background-color: $olive
@@ -32,6 +33,8 @@ header
 			border-radius: 20px
 
 main
+	width: 100%
+	max-width: 720px
 	.title
 		margin-top: 36px
 		text-align: center
@@ -52,3 +55,30 @@ main
 	margin: 36px 5vw
 	display: flex
 	justify-content: space-between
+	align-items: center
+	.left
+		.name
+			h3
+				font-size: 24px
+				font-weight: 700
+	.right
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		gap: 20px
+		.sub
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			width: 62.5vw
+			img
+				display: block
+			div
+				margin-left: 15px
+			span
+				font-weight: 700
+				text-transform: uppercase
+
+.icon
+	width: 50px
