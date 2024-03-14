@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #334022;
+  font-family: "Libre Baskerville", serif;
+  font-size: 16px; }
+
+body {
+  background-color: #334022; }
+  body .wrapper {
+    margin: 15px;
+    background-color: #FDE8D6;
+    border-radius: 20px; }
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px; }
+  header nav a {
+    text-decoration: none;
+    text-align: center;
+    background-color: #334022;
+    color: #FDE8D6;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    padding: 15px 8px;
+    border-radius: 20px; }
+
+main .title {
+  margin-top: 36px;
+  text-align: center;
+  color: #334022; }
+  main .title h1 {
+    text-transform: uppercase; }
+    main .title h1 strong {
+      display: block;
+      font-size: 110px; }
+    main .title h1 span {
+      display: block;
+      font-size: 48px;
+      margin-top: -25px; }
+  main .title h2 {
+    margin-top: 10px; }
+
+.step {
+  margin: 36px 10vw;
+  display: flex;
+  justify-content: space-between; }
+
+/*# sourceMappingURL=style.css.map */
