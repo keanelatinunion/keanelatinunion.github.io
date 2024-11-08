@@ -96,6 +96,8 @@ main .title strong {
   grid-template-columns: repeat(1, 1fr);
 }
 .maps .actual-maps.mexico .map img {
+  width: 100%;
+  max-width: 635px;
   transform: scale(0.8);
 }
 .maps .titles {
