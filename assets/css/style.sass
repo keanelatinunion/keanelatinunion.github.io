@@ -1,20 +1,26 @@
 $olive: #334022
 $dark-olive: #002813
-$cream: #FDE8D6
+$cream: #F7E8D5
 $letra: "Cochin", serif
 $layout-breakpoint-small: 960px
+
+$yellow: #F2AE1D
+$red: #830201
 
 *
 	margin: 0
 	padding: 0
-	color: $olive
+	color: $red
 	font-family: $letra
 	font-size: min(3.25vw, 20px)
 	box-sizing: border-box
 
+ul, li
+	list-style: none
+
 body
 	position: relative
-	background-color: $olive
+	background-color: $yellow
 	display: flex
 	justify-content: center
 	.wrapper
@@ -45,16 +51,20 @@ body
 header
 	.image
 		width: 100%
-		aspect-ratio: 5 / 3
+		background-color: #830201
+		display: flex
+		justify-content: center
+		align-items: center
 		img
 			display: block
 			width: 100%
+			max-width: 500px
 			object-fit: cover
 
 main
 	.title
 		text-align: center
-		background-color: $dark-olive
+		background-color: $red
 		padding: 30px
 		display: flex
 		flex-direction: column
@@ -63,6 +73,8 @@ main
 		gap: 10px
 		h3, em
 			color: $cream
+		strong
+			color: $yellow
 
 .wrapped
 	margin: 30px 5vw
@@ -73,33 +85,82 @@ main
 		display: none
 	h2
 		font-size: min(4.875vw, 36px)
-		color: $olive
+		color: $red
+		text-transform: uppercase
+		font-weight: 400
+
+	.actual-maps
+		display: grid
+		gap: 30px
+		&.mexico
+			grid-template-columns: repeat(1, 1fr)
+
+			.map
+				img
+					transform: scale(0.8)
+
+	.titles
+		display: none
 
 	.map
-		max-width: 450px
+		// max-width: 450px
 		display: inline-flex
 		flex-direction: column
 		justify-content: center
 		align-items: center
-		img
-			margin-top: 20px
-			width: 100%
-			object-fit: cover
-	.gdl
-		margin-top: 30px
 
-@media (min-width: 1077px)
+		.content
+			height: 400px
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			align-items: center
+
+		.left
+			margin-top: 10px
+			img
+				width: 100%
+				max-width: 135px
+				margin-top: 20px
+
+				&.scaled
+					transform: scale(1.125)
+
+		.right
+			margin-top: 25px
+
+		.btn
+			margin-top: 25px
+			width: 100%
+			overflow: hidden
+			display: flex
+			justify-content: center
+			gap: 20px
+			align-items: center
+			img
+				max-width: 180px
+				width: 100%
+
+
+@media (min-width: 1000px)
 	.maps
 		.actual-maps
-			display: grid
 			grid-template-columns: repeat(2, 1fr)
 		.titles
 			display: grid
+			grid-column-gap: 30px
 			grid-template-columns: repeat(2, 1fr)
+
+			&.mexico
+				grid-template-columns: repeat(1, 1fr)
 		.map
 			margin: 0 auto
 			h2
 				display: none
+		.content
+			.right
+				.btn
+					display: flex
 
 .download
 	margin-top: 30px
@@ -110,16 +171,18 @@ main
 		max-width: 500px
 		display: grid
 		grid-template-columns: repeat(1, 1fr)
-		// grid-template-columns: repeat(3, 1fr)
 		grid-row-gap: 15px
 		a
 			width: 100%
 			max-width: 250px
 			display: block
 			margin: 0 auto
+		@media (min-width: 1000px)
+			grid-template-columns: repeat(3, 1fr)
+			gap: 20px
 
 .social
-	background-color: $dark-olive
+	background-color: $red
 	border-radius: 20px
 	padding: 30px
 	text-align: center
@@ -135,10 +198,14 @@ main
 		max-width: 600px
 		margin: 30px auto 20px auto
 		display: grid
+		gap: 20px
 		grid-template-columns: repeat(3, 1fr)
 		a
 			img
 				width: 100%
+				transform: scale(0.85)
+		@media (min-width: 1000px)
+			grid-template-columns: repeat(5, 1fr)
 
 .info
 	.content
@@ -147,5 +214,14 @@ main
 			display: inline-block
 			width: 100%
 			max-width: 750px
-			color: $dark-olive
+			color: $red
 			text-align: center
+
+.footer-img
+	width: 100%
+	display: flex
+	justify-content: center
+	margin: 20px 0
+	img
+		width: 100%
+		max-width: 300px

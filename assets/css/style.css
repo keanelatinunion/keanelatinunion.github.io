@@ -1,2 +1,245 @@
-*{margin:0;padding:0;color:#334022;font-family:"Cochin",serif;font-size:min(3.25vw, 20px);box-sizing:border-box}body{position:relative;background-color:#334022;display:flex;justify-content:center}body .wrapper{display:relative;z-index:100;width:100%;margin:20px 5vw;background-color:#FDE8D6;border-radius:20px;overflow:hidden}.background{position:absolute;width:100%;height:100%;bottom:0;display:flex;flex-direction:column;justify-content:flex-end}.background img{width:100%;object-fit:cover}header .image{width:100%;aspect-ratio:5/3}header .image img{display:block;width:100%;object-fit:cover}main .title{text-align:center;background-color:#002813;padding:30px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px}main .title h3,main .title em{color:#FDE8D6}.wrapped{margin:30px 5vw}.maps{text-align:center}.maps .titles{display:none}.maps h2{font-size:min(4.875vw, 36px);color:#334022}.maps .map{max-width:450px;display:inline-flex;flex-direction:column;justify-content:center;align-items:center}.maps .map img{margin-top:20px;width:100%;object-fit:cover}.maps .gdl{margin-top:30px}@media (min-width: 1077px){.maps .actual-maps{display:grid;grid-template-columns:repeat(2, 1fr)}.maps .titles{display:grid;grid-template-columns:repeat(2, 1fr)}.maps .map{margin:0 auto}.maps .map h2{display:none}}.download{margin-top:30px;display:flex;justify-content:center}.download .buttons{width:100%;max-width:500px;display:grid;grid-template-columns:repeat(1, 1fr);grid-row-gap:15px}.download .buttons a{width:100%;max-width:250px;display:block;margin:0 auto}.social{background-color:#002813;border-radius:20px;padding:30px;text-align:center}.social .social--title span{margin:0 auto;color:#FDE8D6;text-align:center;text-transform:uppercase;font-size:min(3.65625vw, 24px)}.social .links{width:100%;max-width:600px;margin:30px auto 20px auto;display:grid;grid-template-columns:repeat(3, 1fr)}.social .links a img{width:100%}.info .content{text-align:center}.info .content p{display:inline-block;width:100%;max-width:750px;color:#002813;text-align:center}
+* {
+  margin: 0;
+  padding: 0;
+  color: #830201;
+  font-family: "Cochin", serif;
+  font-size: min(3.25vw, 20px);
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+body {
+  position: relative;
+  background-color: #F2AE1D;
+  display: flex;
+  justify-content: center;
+}
+body .wrapper {
+  display: relative;
+  z-index: 100;
+  width: 100%;
+  margin: 20px 5vw;
+  background-color: #F7E8D5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.background img {
+  width: 100%;
+  object-fit: cover;
+}
+
+header .image {
+  width: 100%;
+  background-color: #830201;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .image img {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  object-fit: cover;
+}
+
+main .title {
+  text-align: center;
+  background-color: #830201;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+main .title h3, main .title em {
+  color: #F7E8D5;
+}
+main .title strong {
+  color: #F2AE1D;
+}
+
+.wrapped {
+  margin: 30px 5vw;
+}
+
+.maps {
+  text-align: center;
+}
+.maps .titles {
+  display: none;
+}
+.maps h2 {
+  font-size: min(4.875vw, 36px);
+  color: #830201;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.maps .actual-maps {
+  display: grid;
+  gap: 30px;
+}
+.maps .actual-maps.mexico {
+  grid-template-columns: repeat(1, 1fr);
+}
+.maps .actual-maps.mexico .map img {
+  transform: scale(0.8);
+}
+.maps .titles {
+  display: none;
+}
+.maps .map {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.maps .map .content {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.maps .map .left {
+  margin-top: 10px;
+}
+.maps .map .left img {
+  width: 100%;
+  max-width: 135px;
+  margin-top: 20px;
+}
+.maps .map .left img.scaled {
+  transform: scale(1.125);
+}
+.maps .map .right {
+  margin-top: 25px;
+}
+.maps .map .btn {
+  margin-top: 25px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+.maps .map .btn img {
+  max-width: 180px;
+  width: 100%;
+}
+
+@media (min-width: 1000px) {
+  .maps .actual-maps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .maps .titles {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .maps .titles.mexico {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .maps .map {
+    margin: 0 auto;
+  }
+  .maps .map h2 {
+    display: none;
+  }
+  .maps .content .right .btn {
+    display: flex;
+  }
+}
+.download {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.download .buttons {
+  width: 100%;
+  max-width: 500px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 15px;
+}
+.download .buttons a {
+  width: 100%;
+  max-width: 250px;
+  display: block;
+  margin: 0 auto;
+}
+@media (min-width: 1000px) {
+  .download .buttons {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+.social {
+  background-color: #830201;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+}
+.social .social--title span {
+  margin: 0 auto;
+  color: #F7E8D5;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: min(3.65625vw, 24px);
+}
+.social .links {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto 20px auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.social .links a img {
+  width: 100%;
+  transform: scale(0.85);
+}
+@media (min-width: 1000px) {
+  .social .links {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.info .content {
+  text-align: center;
+}
+.info .content p {
+  display: inline-block;
+  width: 100%;
+  max-width: 750px;
+  color: #830201;
+  text-align: center;
+}
+
+.footer-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.footer-img img {
+  width: 100%;
+  max-width: 300px;
+}
+
 /*# sourceMappingURL=style.css.map */
