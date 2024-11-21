@@ -110,7 +110,6 @@ main .title strong {
   align-items: center;
 }
 .maps .map .content {
-  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -129,6 +128,14 @@ main .title strong {
 }
 .maps .map .right {
   margin-top: 25px;
+}
+.maps .map .right .lyrics {
+  margin-top: 25px;
+}
+.maps .map .right .lyrics span {
+  color: rgba(0, 0, 0, 0.65);
+  display: block;
+  font-style: italic;
 }
 .maps .map .btn {
   margin-top: 25px;
